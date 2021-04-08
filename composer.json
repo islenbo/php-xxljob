@@ -1,0 +1,31 @@
+{
+  "name": "islenbo/php-xxljob",
+  "description": "PHP版XXL-JOB",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "lenbo",
+      "email": "islenbo@qq.com"
+    }
+  ],
+  "require": {
+    "php": "^7.1",
+    "ext-json": "*",
+    "monolog/monolog": "^2.2",
+    "guzzlehttp/guzzle": "^7.3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "XxlJob\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "tests\\": "tests/"
+    }
+  }
+}
