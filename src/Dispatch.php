@@ -26,6 +26,14 @@ class Dispatch
         $this->accessToken = $accessToken;
     }
 
+    public function loopRegistry(string $registryKey, string $registryValue, int $loop = 60): void
+    {
+        while ($loop-- > 0) {
+            $this->registry($registryKey, $registryValue);
+            sleep(1);
+        }
+    }
+
     public function registry(string $registryKey, string $registryValue): bool
     {
         $url = "{$this->server}/api/registry";
